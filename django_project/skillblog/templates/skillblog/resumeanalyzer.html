@@ -1,0 +1,31 @@
+{% extends "skillblog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <form action="{% url 'resumeanalyzer' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>
+            {{ form.file }}
+        </p>
+        <p><input class="btn btn-primary" type="submit" > Submit </p>  <!--value="Submit"--> 
+        <div class="content-section">
+            <h3>Results</h3>
+            <p class='text-muted'>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-light"><b>skillset:</b>  
+                    <p>{{ employee.skillset }}</p>
+                </li>
+                <li class="list-group-item list-group-item-light"><b>Total Experience:</b> 
+                    <p>{{ employee.total_experience }} </p>
+                </li>
+            </ul>
+            </p>
+        </div>
+        </div>
+    </form>
+        <div class="bottom-top pt-3">
+            <small class="text-muted">
+                <a class="ml-2" href="{% url 'resumeanalyzer' %}">Choose Again</a>
+            </small>
+        </div>
+
+{% endblock content %}
