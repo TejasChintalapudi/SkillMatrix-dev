@@ -1,0 +1,16 @@
+pathlib
+ruamel-yaml
+django-jsonfield
+nltk
+numpy
+pandas
+spacy
+requests
+ftfy
+docx2txt
+pywin32
+pdfminer
+pdfminer.six
+unidecode
+pyresparser
+django-crispy-forms
